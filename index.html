@@ -13,4 +13,21 @@
     <header class="p-5 text-center text-white bg-primary">
       <h1>Weather Dashboard</h1>
     </header>
+
+    <main>
+        <section id="searchSection">
+            <div id="userInput" class="mb-15">
+                <h3 class="mb-15">Search for a City:</h3>
+                <form id="cityForm"></form>
+                    <input type="text"   id="city" class="mb-15 round" placeholder="Search City" autocomplete="off"><br>
+                    <input type="submit" value="Search" id="submit" class="mb-15 round">
+                </form>
+            </div>
+            <div id="searchHistory"></div>
+        </section>
+        <section id="resultSection"></section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+</html>
