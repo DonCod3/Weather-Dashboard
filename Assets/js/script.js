@@ -47,3 +47,19 @@ let loadDailyWeather = function(data, i) {
     let lastHumid = spanHumid[spanHumid.length - 1];
     lastHumid.textContent = data.daily[i].humidity + "%";
 }
+
+let cityCords = function(city, data) {
+    let lat = data.coord.lat;
+    let lon = data.coord.lon;
+    let apiUrl = "https://api.openweathermap.org/data/2.5/forecast?lat" = +lat + "&lon=" + lon + "&appid=1b3e400964317cdeb0bc6eb9c6ca7632"; 
+
+    fetch(apiUrl).then(function(response) {
+        if(response.ok) {
+            response.json().then(function(data) {
+                getCurrentWeather(city, data);
+            })
+        } else {
+            apiError();
+        }
+    })
+};
